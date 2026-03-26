@@ -152,7 +152,7 @@ Neste caso, tudo após o primeiro `%command%` será ignorado porque está a ser 
 
 - Suporte HDR
     - `PROTON_ENABLE_HDR=1`: Ativa o suporte de saída HDR.
-      - **Requisitos**: Gamescope com `--hdr-enabled` OU `PROTON_ENABLE_WAYLAND=1`. Se o teu GPU for **NVIDIA**, adiciona `ENABLE_HDR_WSI=1` e instala o pacote `vk-hdr-layer-kwin6-git`.
+      - **Requisitos**: Gamescope com `--hdr-enabled` OU `PROTON_ENABLE_WAYLAND=1`.
       - **Configuração**: [Configuração adicional necessária](https://wiki.archlinux.org/title/HDR_monitor_support).
 
 </TabItem>
@@ -160,10 +160,8 @@ Neste caso, tudo após o primeiro `%command%` será ignorado porque está a ser 
 <TabItem label="Desempenho e Cache">
 
 - Desempenho de CPU e Sync
-    - `PROTON_USE_NTSYNC=1`: Utiliza NTSync em vez de WINESync.
-        - **Benefício**: Possibilidade de aumento de fluidez em certos jogos.
-        - **Nota**: Experimental, pode causar problemas em alguns jogos.
-        - **Verificação**: Use `lsof /dev/ntsync` (o MangoHud reporta incorretamente).
+	- `PROTON_USE_NTSYNC=0`: Utiliza o FSync em vez do NTSync.
+		- Benefício: Possibilidade de corrigir problemas em certos jogos que não funcionam bem com o NTSync.
 
 - Gestão de Shaders e Cache
     - `PROTON_LOCAL_SHADER_CACHE=1`: Ativa a cache de shaders por jogo, semelhante ao "Shader Pre-Caching" da Steam.
