@@ -409,7 +409,7 @@ Este guia assume que tem a configuração padrão do CachyOS com ZRam ativado e 
                         ```
                     4. Adicione o ficheiro de swap ao `/etc/fstab` para torná-lo persistente entre reinicializações:
                         ```bash
-                        echo "/swapfile none swap defaults 0 0" | sudo tee -a /etc/fstab
+                        echo "/swap/swapfile none swap defaults 0 0" | sudo tee -a /etc/fstab
                         ```
                 </Steps>
         </details>
